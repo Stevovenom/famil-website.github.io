@@ -472,6 +472,44 @@
                 -webkit-background-clip: text;
             }
         } */
+        /* Footer Styles */
+        .bottom_footer {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 24px 0;
+            margin-top: auto;
+            /* ensures it stays at bottom even if content is short */
+            width: 100%;
+        }
+
+        .bottom_footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .float_left {
+            float: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+
+        @media (max-width: 768px) {
+
+            .float_left,
+            .float_right {
+                float: none;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Add some padding to the last section to ensure content isn't hidden behind footer */
+        .content-wrapper {
+            padding-bottom: 0;
+            /* Space for footer when it appears */
+        }
     </style>
 </head>
 
@@ -664,19 +702,19 @@
                         Kenya.
                     </p>
 
-                    <!-- SMALLER & CLEANER CTAs -->
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <!-- SMALLER & CYLINDRICAL CTAs -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
                         <a href="contact-us.html"
-                            class="btn btn-primary px-6 py-3 text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 group">
+                            class="btn btn-primary px-5 py-2.5 text-sm font-semibold rounded-full shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 group">
                             Request Demo
-                            <svg class="lucide lucide-arrow-right w-4 h-4 group-hover:translate-x-1 transition-transform"
+                            <svg class="lucide lucide-arrow-right w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"
                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg>
                         </a>
                         <a href="services.html"
-                            class="btn btn-outline px-6 py-3 text-base font-semibold rounded-lg border-2 border-white/50 hover:border-white hover:bg-white/10 transition-all duration-300">
+                            class="btn btn-outline px-5 py-2.5 text-sm font-semibold rounded-full border-2 border-white/50 hover:border-white hover:bg-white/10 transition-all duration-300">
                             Explore Services
                         </a>
                     </div>
@@ -730,18 +768,17 @@
                             class="glass-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 rounded-xl border border-white/5">
                             <div class="flex items-start space-x-4">
                                 <div class="p-3 bg-blue-500/10 rounded-lg">
-                                    <svg class="lucide lucide-brain w-6 h-6 text-blue-400" fill="none"
+                                    <svg class="lucide lucide-globe w-6 h-6 text-blue-400" fill="none"
                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M2 12h20"></path>
                                         <path
-                                            d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-5 0v-15A2.5 2.5 0 0 1 9.5 2Z">
-                                        </path>
-                                        <path
-                                            d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 5 0v-15A2.5 2.5 0 0 0 14.5 2Z">
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
                                         </path>
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold text-blue-400 mb-2">AI & Machine Learning</h3>
+                                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Websites Design</h3>
                                     <p class="text-gray-300 text-sm">Intelligent automation and predictive analytics</p>
                                 </div>
                             </div>
@@ -752,680 +789,1090 @@
         </div>
     </section>
 
-    <!-- Our Services Section -->
-    <div class="relative z-10 py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-            <!-- Header -->
-            <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-lg rounded-full mb-4">
-                    <span class="text-white text-sm font-medium">Our Our Services</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-purple-400 mb-6">Our Services We Provide Our Clients</h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">We offer a comprehensive range of technology
-                    solutions tailored to meet your business needs with innovation, expertise, and reliability.</p>
-            </div>
 
-            <!-- Our Services Grid - 3 columns layout -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Service 1: Android & iOS Mobile App Development -->
-                <div
-                    class="service-card p-6 cursor-pointer transition-all duration-500 glass-card rounded-xl border border-white/10 hover:bg-white/15">
-                    <div class="flex items-start space-x-4">
-                        <div
-                            class="p-2 rounded-xl transition-colors duration-300 bg-white/10 flex items-center justify-center overflow-hidden w-16 h-16">
-                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Android & iOS Mobile App Development
-                            </h3>
-                            <div class="text-gray-300 mb-4 line-clamp-2 overflow-hidden">
-                                <p>Transform your mobile strategy with high-performance, user-centric mobile
-                                    applications for Android and iOS platforms.</p>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Native iOS Development</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Native Android Development</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Cross-Platform Solutions</span>
-                                </div>
-                            </div>
-                            <!-- <button class="mt-4 w-full inline-flex items-center justify-center px-4 py-2 border border-blue-500/50 rounded-lg text-white hover:bg-blue-500/20 transition-colors text-sm">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 ml-1">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button> -->
-                        </div>
-                    </div>
+    <!-- About Us Section - Light Theme (Matching Contact Page) -->
+<section class="relative overflow-hidden bg-white py-24" id="about">
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-blue-500/10 to-transparent blur-3xl">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-purple-600/10 to-transparent blur-3xl">
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Left Column: Content -->
+            <div class="space-y-8">
+                <!-- Section Title with Decorative SVG -->
+                <div class="space-y-4">
+
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">About
+                            Us</span>
+                    </h2>
                 </div>
 
-                <!-- Service 2: Custom Software Development Our Services -->
-                <div
-                    class="service-card p-6 cursor-pointer transition-all duration-500 glass-card rounded-xl border border-white/10 hover:bg-white/15">
-                    <div class="flex items-start space-x-4">
-                        <div
-                            class="p-2 rounded-xl transition-colors duration-300 bg-white/10 flex items-center justify-center overflow-hidden w-16 h-16">
-                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Custom Software Development Our
-                                Services
-                            </h3>
-                            <div class="text-gray-300 mb-4 line-clamp-2 overflow-hidden">
-                                <p>Transforming innovative ideas into powerful digital solutions across multiple
-                                    platforms and enterprise environments.</p>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Mobile App Development</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Web Application Engineering</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Desktop Software Creation</span>
-                                </div>
-                            </div>
-                            <!-- <button class="mt-4 w-full inline-flex items-center justify-center px-4 py-2 border border-blue-500/50 rounded-lg text-white hover:bg-blue-500/20 transition-colors text-sm">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 ml-1">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button> -->
-                        </div>
-                    </div>
-                </div>
+                <!-- Description -->
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Keypad Systems has been optimized to give your business the best experience in terms of
+                    technology solutions, with unique, customized approaches for each client.
+                </p>
 
-                <!-- Service 3: Machine Learning & AI Integration -->
-                <div
-                    class="service-card p-6 cursor-pointer transition-all duration-500 glass-card rounded-xl border border-white/10 hover:bg-white/15">
-                    <div class="flex items-start space-x-4">
-                        <div
-                            class="p-2 rounded-xl transition-colors duration-300 bg-white/10 flex items-center justify-center overflow-hidden w-16 h-16">
-                            <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-purple-400 mb-2">Machine Learning & AI Integration
-                            </h3>
-                            <div class="text-gray-300 mb-4 line-clamp-2 overflow-hidden">
-                                <p>Revolutionize your business systems with advanced machine learning and artificial
-                                    intelligence solutions.</p>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Custom AI Model Development</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Machine Learning Algorithms</span>
-                                </div>
-                                <div class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-circle-check-big w-4 h-4 mr-2 text-blue-400 flex-shrink-0">
-                                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                        <path d="m9 11 3 3L22 4"></path>
-                                    </svg>
-                                    <span class="text-sm">Predictive Intelligence</span>
-                                </div>
-                            </div>
-                            <!-- <button class="mt-4 w-full inline-flex items-center justify-center px-4 py-2 border border-blue-500/50 rounded-lg text-white hover:bg-blue-500/20 transition-colors text-sm">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 ml-1">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button> -->
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- CTA Section -->
-            <div class="mt-16 text-center">
-                <div
-                    class="inline-block p-8 bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-lg rounded-xl border border-white/10">
-                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 flex-wrap">
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-purple-400">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                <path d="m9 11 3 3L22 4"></path>
-                            </svg>
-                            <span class="text-gray-300">Affordable Pricing</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-circle-alert w-5 h-5 text-blue-400">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" x2="12" y1="8" y2="12"></line>
-                                <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                            </svg>
-                            <span class="text-gray-300">Free Consultation</span>
-                        </div>
-                        <button class="btn btn-primary px-6 py-3 md:ml-4 w-full md:w-auto">
-                            Get a Quote
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
-                            </svg>
+                <!-- Tabs Navigation -->
+                <div class="space-y-6">
+                    <div class="flex flex-wrap gap-4 border-b border-gray-200">
+                        <button
+                            class="tab-button px-4 py-3 text-gray-500 hover:text-gray-800 transition-all font-medium border-b-2 border-transparent hover:border-blue-600"
+                            data-tab="mission">
+                            Our Mission
+                        </button>
+                        <button
+                            class="tab-button px-4 py-3 text-gray-500 hover:text-gray-800 transition-all font-medium border-b-2 border-transparent hover:border-blue-600"
+                            data-tab="vision">
+                            Our Vision
+                        </button>
+                        <button class="tab-button px-4 py-3 text-gray-800 font-medium border-b-2 border-blue-600"
+                            data-tab="value">
+                            Our Value
                         </button>
                     </div>
+
+                    <!-- Tab Content -->
+                    <div class="space-y-4">
+                        <div class="tab-content hidden" id="mission-tab">
+                            <p class="text-gray-600 leading-relaxed">
+                                To enhance invention and innovation to revolutionize IT sector, develop IT products that
+                                are cost effective and easy to use and to build a mutual relationship among our
+                                clients
+                            </p>
+                        </div>
+                        <div class="tab-content hidden" id="vision-tab">
+                            <p class="text-gray-600 leading-relaxed">
+                                We envision a future where African
+                                businesses lead in technological innovation, driving economic growth and
+                                creating opportunities for all.
+                            </p>
+                        </div>
+                        <div class="tab-content" id="value-tab">
+                            <p class="text-gray-600 leading-relaxed">
+                                we've grown steadily, expanding our service offerings and building a reputation for quality,
+                                reliability, and innovation. We're proud of our journey so far and excited about
+                                the future as we continue to evolve and expand our impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button with Video - Updated to Cylindrical -->
+                <div class="pt-4">
+                    <div class="relative inline-flex items-center group">
+                        <a href="about-us.html"
+                            class="relative inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group">
+                            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                            <span class="sr-only">Learn more</span>
+                        </a>
+                        
+                        <!-- Text label beside the button -->
+                        <div class="ml-4">
+                            <span class="text-sm font-medium text-gray-700">Learn more</span>
+                            <div class="text-xs text-gray-500 mt-1">Discover our story</div>
+                        </div>
+                        
+                        <!-- Tooltip -->
+                        <span class="absolute -top-10 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-gray-800 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            Explore Our Story
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Image with Counter -->
+            <div class="relative">
+                <!-- Main Image Container -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                        alt="Keypad Systems Team" class="w-full h-auto object-cover">
+
+                    <!-- Counter Overlay - White background like contact page boxes -->
+                    <div
+                        class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 max-w-xs shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600">
+                                    <span class="counter" data-target="7">0</span>+
+                                </div>
+                                <div class="text-sm text-gray-600 mt-1">Years of Experience</div>
+                            </div>
+                            <div class="h-12 w-px bg-gray-300"></div>
+                            <div class="text-sm text-gray-600">
+                                <p>Trusted by businesses across Kenya with innovative solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decorative Elements - Subtle for light theme -->
+                <div
+                    class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-600/10 rounded-full blur-xl">
+                </div>
+                <div
+                    class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-blue-500/5 to-purple-600/5 rounded-full blur-xl">
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- About Us Section -->
-    <!-- About Us Section -->
-    <section class="relative overflow-hidden bg-white light-theme" id="about">
-        <div class="absolute inset-0 overflow-hidden z-0">
-            <div class="absolute inset-0 opacity-10"
-                style="background-image: radial-gradient(rgb(85, 164, 192) 1px, transparent 1px), radial-gradient(rgb(226, 121, 46) 1px, transparent 1px); background-size: 30px 30px; background-position: 0px 0px, 15px 15px;">
+<style>
+    /* Smooth tab transitions */
+    .tab-content {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Custom shadow for image - lighter for white background */
+    .shadow-2xl {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* White background styling like contact page */
+    .bg-white\/90 {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Cylindrical button styling for About Us */
+    @keyframes about-cta-pulse {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+        }
+        50% {
+            box-shadow: 0 0 0 8px rgba(79, 70, 229, 0);
+        }
+    }
+    
+    a[href="about-us.html"]:hover {
+        animation: about-cta-pulse 2s infinite;
+    }
+    
+    /* Smooth hover transition for tabs */
+    .tab-button {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .tab-button::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .tab-button:hover::after {
+        transform: scaleX(1);
+    }
+    
+    .tab-button.border-blue-600::after {
+        transform: scaleX(1);
+    }
+</style>
+
+<script>
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Update active button
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('text-gray-800', 'border-blue-600');
+                    btn.classList.add('text-gray-500');
+                });
+                
+                this.classList.remove('text-gray-500');
+                this.classList.add('text-gray-800', 'border-blue-600');
+                
+                // Update content visibility
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                const activeContent = document.getElementById(`${tabId}-tab`);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                }
+            });
+        });
+        
+        // Animate counter
+        const counterElement = document.querySelector('.counter');
+        if (counterElement) {
+            const target = parseInt(counterElement.getAttribute('data-target'));
+            let count = 0;
+            const increment = target / 50;
+            
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(timer);
+                }
+                counterElement.textContent = Math.floor(count);
+            }, 40);
+        }
+        
+        // Cylindrical button interaction
+        const aboutCTA = document.querySelector('a[href="about-us.html"]');
+        if (aboutCTA) {
+            aboutCTA.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            
+            aboutCTA.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotate(0deg)';
+            });
+            
+            // Add click animation
+            aboutCTA.addEventListener('click', function(e) {
+                // Smooth click animation
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                }, 100);
+            });
+        }
+    });
+</script>
+
+    <!-- Our Services Section - Professional Version -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-semibold mb-4 tracking-wide">
+                    OUR EXPERTISE
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Digital Solutions That <span class="text-indigo-600">Accelerate Growth</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Professional software services designed to transform your business operations and customer
+                    experiences.
+                </p>
             </div>
-            <div class="absolute inset-0 opacity-10"
-                style="background-image: linear-gradient(rgb(85, 164, 192) 1px, transparent 1px), linear-gradient(to right, rgb(226, 121, 46) 1px, transparent 1px); background-size: 80px 80px;">
-            </div>
-            <div class="absolute top-[10%] left-[10%] w-80 h-80 rounded-full bg-blue-500/5 filter blur-3xl"></div>
-            <div class="absolute bottom-[10%] right-[10%] w-80 h-80 rounded-full bg-purple-600/5 filter blur-3xl"></div>
-        </div>
 
-        <div class="relative z-10">
-            <section class="py-16">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-                    <!-- Organization Section -->
-                    <div class="mb-12">
-                        <div class="text-center mb-8">
-                            <div class="inline-block px-4 py-2 mb-4 bg-blue-500/10 backdrop-blur-sm rounded-full">
-                                <span class="text-blue-500 font-medium text-sm">About Us</span>
-                            </div>
-                            <h2 class="text-4xl md:text-5xl font-bold text-purple-600 mb-6">Keypad Solutions LTD</h2>
-                            <p class="text-lg text-primary/80 max-w-2xl mx-auto">We're a team of dedicated professionals
-                                passionate about building innovative tech solutions that help businesses in Kenya thrive
-                                in the digital age.</p>
-                        </div>
-                    </div>
+            <!-- Services Grid - Compact Professional Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
-                    <!-- Mission Section -->
-                    <div class="mb-10">
-                        <div class="bg-primary/5 backdrop-blur-sm rounded-xl overflow-hidden border border-primary/10">
-                            <div class="flex border-b border-primary/20">
-                                <button
-                                    class="flex-1 py-3 px-4 text-sm font-medium transition-all duration-300 text-primary/70 hover:text-primary hover:bg-primary/5">
-                                    <div class="flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-info w-4 h-4 mr-2">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <path d="M12 16v-4"></path>
-                                            <path d="M12 8h.01"></path>
-                                        </svg>
-                                        About us
-                                    </div>
-                                </button>
-                                <button
-                                    class="flex-1 py-3 px-4 text-sm font-medium transition-all duration-300 text-primary border-b-2 border-purple-600 bg-primary/5">
-                                    <div class="flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-target w-4 h-4 mr-2">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <circle cx="12" cy="12" r="6"></circle>
-                                            <circle cx="12" cy="12" r="2"></circle>
-                                        </svg>
-                                        Our Mission
-                                    </div>
-                                </button>
-                                <button
-                                    class="flex-1 py-3 px-4 text-sm font-medium transition-all duration-300 text-primary/70 hover:text-primary hover:bg-primary/5">
-                                    <div class="flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-eye w-4 h-4 mr-2">
-                                            <path
-                                                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0">
-                                            </path>
-                                            <circle cx="12" cy="12" r="3"></circle>
-                                        </svg>
-                                        Our Vision
-                                    </div>
-                                </button>
-                                <button
-                                    class="flex-1 py-3 px-4 text-sm font-medium transition-all duration-300 text-primary/70 hover:text-primary hover:bg-primary/5">
-                                    <div class="flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-clock w-4 h-4 mr-2">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="12 6 12 12 16 14"></polyline>
-                                        </svg>
-                                        Our History
-                                    </div>
-                                </button>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-purple-600 mb-3 flex items-center">Our Driving Purpose
-                                </h3>
-                                <p class="text-primary/80 leading-relaxed mb-5">At Keypad, our mission is to empower
-                                    businesses through innovative, accessible, and scalable technology solutions. We are
-                                    committed to bridging the technological gap in Africa by providing cutting-edge
-                                    software development, AI implementation, and digital transformation Our Services
-                                    that
-                                    enable organizations to thrive in the digital age.</p>
-                                <div class="flex justify-end">
-                                    <!-- <button class="btn btn-outline px-4 py-2 text-sm">
-                                    Learn More 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4">
-                                        <path d="M5 12h14"></path>
-                                        <path d="m12 5 7 7-7 7"></path>
+                <!-- Mobile App Development Card -->
+                <div
+                    class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                    <div class="p-6">
+                        <!-- Image Icon -->
+                        <div class="flex justify-center mb-4">
+                            <div class="relative">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center border-4 border-white shadow-md">
+                                    <img src="assets/images/mobile-app-icon.svg" alt="Mobile App Development"
+                                        class="w-10 h-10"
+                                        onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3244/3244344.png'; this.className='w-10 h-10 text-indigo-600'">
+                                </div>
+                                <div
+                                    class="absolute -top-1 -right-1 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
                                     </svg>
-                                </button> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="text-center">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                Mobile App Development
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Native iOS & Android applications with seamless user experiences and market-ready
+                                optimization.
+                            </p>
+
+                            <!-- Key Features -->
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">Cross-Platform Development</span>
+                                </div>
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">App Store Optimization</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
+                    <!-- Bottom Gradient Line -->
+                    <div
+                        class="h-1 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                    </div>
                 </div>
-            </section>
+
+                <!-- Custom Software Card -->
+                <div
+                    class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                    <div class="p-6">
+                        <!-- Image Icon -->
+                        <div class="flex justify-center mb-4">
+                            <div class="relative">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center border-4 border-white shadow-md">
+                                    <img src="assets/images/software-icon.svg" alt="Custom Software" class="w-10 h-10"
+                                        onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3094/3094015.png'; this.className='w-10 h-10 text-green-600'">
+                                </div>
+                                <div
+                                    class="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="text-center">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                                Custom Software Solutions
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Tailored enterprise applications designed to solve specific business challenges
+                                efficiently.
+                            </p>
+
+                            <!-- Key Features -->
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">Web Application Development</span>
+                                </div>
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">Desktop Software Creation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Gradient Line -->
+                    <div
+                        class="h-1 bg-gradient-to-r from-green-500 to-teal-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                    </div>
+                </div>
+
+                <!-- Business Solutions Card -->
+                <div
+                    class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                    <div class="p-6">
+                        <!-- Image Icon -->
+                        <div class="flex justify-center mb-4">
+                            <div class="relative">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center border-4 border-white shadow-md">
+                                    <img src="assets/images/business-icon.svg" alt="Business Solutions"
+                                        class="w-10 h-10"
+                                        onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3079/3079165.png'; this.className='w-10 h-10 text-orange-600'">
+                                </div>
+                                <div
+                                    class="absolute -top-1 -right-1 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="text-center">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                                Business Solutions
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Industry-specific systems for schools, churches, and HR management with full automation.
+                            </p>
+
+                            <!-- Key Features -->
+                            <div class="space-y-2 mb-4">
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">Smartshule & Smartchurch</span>
+                                </div>
+                                <div class="flex items-center justify-center text-gray-700">
+                                    <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-xs">M-Pesa Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Gradient Line -->
+                    <div
+                        class="h-1 bg-gradient-to-r from-orange-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Circular CTA Button -->
+            <div class="text-center pt-4">
+                <div class="relative inline-block">
+                    <!-- Glow Effect -->
+                    <div
+                        class="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                    </div>
+
+                    <!-- Circular Button -->
+                    <a href="services.html"
+                        class="relative inline-flex items-center justify-center w-14 h-14 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
+                        <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                        <span class="sr-only">View All Services</span>
+                    </a>
+
+                    <!-- Tooltip/Label -->
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                        <span
+                            class="text-sm font-medium text-gray-700 bg-white px-3 py-1 rounded-full shadow-sm border border-gray-200">
+                            View All Services
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <p class="mt-12 text-gray-500 text-sm">
+                    <span class="font-medium text-gray-700">+6 additional services available</span>
+                    <span class="mx-2">•</span>
+                    <span>Complete digital transformation solutions</span>
+                </p>
+            </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="relative py-24 bg-gray-900" id="products">
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 right-0 w-full h-96 bg-gradient-to-bl from-blue-600/10 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-tr from-purple-600/10 to-transparent"></div>
+    <style>
+        /* Add these styles for enhanced professional look */
+        .professional-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .professional-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth image hover effect */
+        .card-icon-container {
+            transition: transform 0.3s ease;
+        }
+
+        .group:hover .card-icon-container {
+            transform: scale(1.05);
+        }
+
+        /* Subtle pulse animation for CTA */
+        @keyframes subtle-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2);
+            }
+
+            50% {
+                box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+            }
+        }
+
+        .circular-cta {
+            animation: subtle-pulse 3s infinite;
+        }
+    </style>
+
+    <script>
+        // Smooth hover effects for cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.group.bg-white.rounded-xl');
+
+            cards.forEach(card => {
+                // Add subtle tilt effect on hover
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+
+                    const rotateY = (x - centerX) / 25;
+                    const rotateX = (centerY - y) / 25;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                });
+            });
+
+            // Enhanced CTA animation
+            const ctaButton = document.querySelector('.circular-cta');
+            if (ctaButton) {
+                ctaButton.addEventListener('mouseenter', () => {
+                    ctaButton.style.animation = 'subtle-pulse 1s infinite';
+                });
+
+                ctaButton.addEventListener('mouseleave', () => {
+                    ctaButton.style.animation = 'subtle-pulse 3s infinite';
+                });
+            }
+        });
+    </script>
+
+    <!-- Business Solutions Section -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <span class="inline-block px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-semibold mb-4 tracking-wide">
+                INDUSTRY SOLUTIONS
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Specialized <span class="text-indigo-600">Business Solutions</span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                Tailored software systems designed for specific industries with proven results and seamless integration.
+            </p>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16">
-                <div class="inline-block px-4 py-2 bg-blue-500/20 backdrop-blur-lg rounded-full mb-4">
-                    <span class="text-white text-sm font-medium">Our Products</span>
+        <!-- Solutions Grid - Compact Professional Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+            <!-- Smartshule - Education -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div class="p-6">
+                    <!-- Logo & Badge -->
+                    <div class="flex justify-center mb-4">
+                        <div class="relative">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center border-4 border-white shadow-md">
+                                <img src="assets/images/smartshule-logo.png" alt="Smartshule" class="w-14 h-14 object-contain">
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="text-center">
+                        <div class="mb-2">
+                            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-semibold">
+                                EDUCATION
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                            Smartshule
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Comprehensive school management system for automating academic operations and enhancing learning outcomes.
+                        </p>
+
+                        <!-- Stats -->
+                        <div class="flex justify-center items-center space-x-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">100+</div>
+                                <div class="text-xs text-gray-500">Schools</div>
+                            </div>
+                            <div class="h-6 w-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">24/7</div>
+                                <div class="text-xs text-gray-500">Support</div>
+                            </div>
+                        </div>
+
+                        <!-- Cylindrical CTA -->
+                        <div class="relative flex justify-center">
+                            <a href="https://smartshule.com" target="_blank" rel="noopener noreferrer" class="business-cta blue-cta">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                                <span class="sr-only">Know More About Smartshule</span>
+                                <span class="business-tooltip">Visit Smartshule.com</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-purple-400 mb-6">Our Most Sort Products</h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto">Discover our innovative software solutions designed
-                    to transform your business operations and drive growth.</p>
+                <!-- Bottom Gradient Line -->
+                <div class="business-gradient-line blue-gradient"></div>
             </div>
 
-            <!-- Products Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-                <!-- Product 1: Custom Software Solutions -->
-                <div
-                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-lg border border-white/10 hover:border-blue-500/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <!-- Content Side -->
-                        <div class="p-8 flex-1 flex flex-col justify-center">
-                            <h3 class="text-2xl font-bold text-purple-400 mb-4">Custom Software Solutions</h3>
-                            <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"></div>
-                            <p class="text-gray-300 mb-6">Tailored software applications designed to meet your specific
-                                business needs and workflow requirements.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Business Process Automation</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Custom Workflow Solutions</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Scalable Architecture</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="btn btn-outline w-full md:w-auto justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
+            <!-- Smartchurch -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div class="p-6">
+                    <!-- Logo & Badge -->
+                    <div class="flex justify-center mb-4">
+                        <div class="relative">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center border-4 border-white shadow-md">
+                                <img src="assets/images/smartchurch.png" alt="Smartchurch" class="w-14 h-14 object-contain" onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/619/619153.png'; this.className='w-10 h-10 text-purple-600'">
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                            </button>
-                        </div>
-
-                        <!-- Image Side -->
-                        <div class="relative md:w-2/5 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-l from-blue-500/20 to-transparent z-10"></div>
-                            <div class="h-full w-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
-                                style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Product 2: AI & Machine Learning -->
-                <div
-                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600/10 to-blue-500/10 backdrop-blur-lg border border-white/10 hover:border-purple-500/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <!-- Content Side -->
-                        <div class="p-8 flex-1 flex flex-col justify-center order-2 md:order-1">
-                            <h3 class="text-2xl font-bold text-blue-400 mb-4">AI & Machine Learning</h3>
-                            <div class="w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mb-4"></div>
-                            <p class="text-gray-300 mb-6">Intelligent solutions that leverage artificial intelligence to
-                                automate processes and provide data-driven insights.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Predictive Analytics</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Natural Language Processing</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Computer Vision Solutions</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="btn btn-outline w-full md:w-auto justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button>
+                    <!-- Content -->
+                    <div class="text-center">
+                        <div class="mb-2">
+                            <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-semibold">
+                                RELIGIOUS
+                            </span>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                            Smartchurch
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Complete church management system for congregation management, tithing, and event coordination.
+                        </p>
 
-                        <!-- Image Side -->
-                        <div class="relative md:w-2/5 overflow-hidden order-1 md:order-2">
-                            <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent z-10"></div>
-                            <div class="h-full w-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
-                                style="background-image: url('https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <!-- Stats -->
+                        <div class="flex justify-center items-center space-x-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">50+</div>
+                                <div class="text-xs text-gray-500">Churches</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3: Mobile Applications -->
-                <div
-                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-600/10 backdrop-blur-lg border border-white/10 hover:border-blue-500/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <!-- Image Side -->
-                        <div class="relative md:w-2/5 overflow-hidden">
-                            <div class="absolute inset-0 bg-gradient-to-l from-blue-500/20 to-transparent z-10"></div>
-                            <div class="h-full w-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
-                                style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                            <div class="h-6 w-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">Secure</div>
+                                <div class="text-xs text-gray-500">Payments</div>
                             </div>
                         </div>
 
-                        <!-- Content Side -->
-                        <div class="p-8 flex-1 flex flex-col justify-center">
-                            <h3 class="text-2xl font-bold text-purple-400 mb-4">Mobile Applications</h3>
-                            <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"></div>
-                            <p class="text-gray-300 mb-6">Native and cross-platform mobile apps that deliver exceptional
-                                user experiences across all devices.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">iOS & Android Development</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Cross-Platform Solutions</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-blue-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">App Store Optimization</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="btn btn-outline w-full md:w-auto justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
+                        <!-- Cylindrical CTA -->
+                        <div class="relative flex justify-center">
+                            <a href="https://smartchurch.com" target="_blank" rel="noopener noreferrer" class="business-cta purple-cta">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                                 </svg>
-                            </button>
+                                <span class="sr-only">Know More About Smartchurch</span>
+                                <span class="business-tooltip">Visit Smartchurch.com</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Product 4: Web Development -->
-                <div
-                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600/10 to-blue-500/10 backdrop-blur-lg border border-white/10 hover:border-purple-500/30 transition-all duration-500">
-                    <div class="flex flex-col md:flex-row h-full">
-                        <!-- Image Side -->
-                        <div class="relative md:w-2/5 overflow-hidden order-1">
-                            <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent z-10"></div>
-                            <div class="h-full w-full bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
-                                style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
-                            </div>
-                        </div>
-
-                        <!-- Content Side -->
-                        <div class="p-8 flex-1 flex flex-col justify-center order-2">
-                            <h3 class="text-2xl font-bold text-blue-400 mb-4">Web Development</h3>
-                            <div class="w-12 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mb-4"></div>
-                            <p class="text-gray-300 mb-6">Responsive, high-performance websites and web applications
-                                that drive engagement and conversions.</p>
-                            <ul class="space-y-2 mb-6">
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">E-commerce Solutions</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">Progressive Web Apps</span>
-                                </li>
-                                <li class="flex items-center text-gray-300">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="lucide lucide-check-circle w-4 h-4 text-purple-400 mr-2">
-                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                    </svg>
-                                    <span class="text-sm">SEO Optimization</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="btn btn-outline w-full md:w-auto justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                                Learn More
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="lucide lucide-arrow-right w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14"></path>
-                                    <path d="m12 5 7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <!-- Bottom Gradient Line -->
+                <div class="business-gradient-line purple-gradient"></div>
             </div>
 
-            <!-- CTA Section -->
-            <div class="mt-16 text-center">
-                <div
-                    class="inline-block p-8 bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-lg rounded-xl border border-white/10">
-                    <h3 class="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-                    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Let's discuss how our products can help you achieve
-                        your business goals with cutting-edge technology solutions.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <button class="btn btn-primary px-8 py-3">
-                            Get Started Today
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4 ml-2">
-                                <path d="M5 12h14"></path>
-                                <path d="m12 5 7 7-7 7"></path>
+            <!-- HR Solutions -->
+            <div class="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                <div class="p-6">
+                    <!-- Logo & Badge -->
+                    <div class="flex justify-center mb-4">
+                        <div class="relative">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center border-4 border-white shadow-md">
+                                <div class="w-14 h-14 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                                    <i class="fas fa-user-tie text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center shadow-sm">
+                                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="text-center">
+                        <div class="mb-2">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-600 rounded-full text-xs font-semibold">
+                                CORPORATE
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                            HR Solutions
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                            Comprehensive human resource management system for employee tracking, payroll, and performance management.
+                        </p>
+
+                        <!-- Stats -->
+                        <div class="flex justify-center items-center space-x-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">500+</div>
+                                <div class="text-xs text-gray-500">Employees</div>
+                            </div>
+                            <div class="h-6 w-px bg-gray-200"></div>
+                            <div class="text-center">
+                                <div class="text-sm font-bold text-gray-900">Auto</div>
+                                <div class="text-xs text-gray-500">Reports</div>
+                            </div>
+                        </div>
+
+                        <!-- Book Demo CTA -->
+                        <div class="relative flex justify-center">
+                            <a href="#contact-us" class="business-cta green-cta">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                                <span class="sr-only">Book Demo</span>
+                                <span class="business-tooltip">Book Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Gradient Line -->
+                <div class="business-gradient-line green-gradient"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consolidated CSS -->
+<style>
+    /* Business CTA Button Styles */
+    .business-cta {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .business-cta svg {
+        transition: transform 0.3s ease;
+    }
+    
+    .business-cta:hover svg {
+        transform: translateX(4px);
+    }
+    
+    /* Color-specific CTAs */
+    .blue-cta {
+        background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        color: white;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+    
+    .blue-cta:hover {
+        box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        transform: scale(1.1);
+    }
+    
+    .purple-cta {
+        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        color: white;
+        box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    }
+    
+    .purple-cta:hover {
+        box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        transform: scale(1.1);
+    }
+    
+    .green-cta {
+        background: linear-gradient(135deg, #10b981, #0d9488);
+        color: white;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    
+    .green-cta:hover {
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        transform: scale(1.1);
+    }
+    
+    /* Tooltip Styles */
+    .business-tooltip {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1f2937;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 10;
+        pointer-events: none;
+    }
+    
+    .business-tooltip::after {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #1f2937;
+    }
+    
+    .business-cta:hover .business-tooltip {
+        opacity: 1;
+        visibility: visible;
+        bottom: -48px;
+    }
+    
+    /* Gradient Line Styles */
+    .business-gradient-line {
+        height: 3px;
+        transform-origin: left;
+        transition: transform 0.3s ease-out;
+    }
+    
+    .blue-gradient {
+        background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    }
+    
+    .purple-gradient {
+        background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    }
+    
+    .green-gradient {
+        background: linear-gradient(90deg, #10b981, #0d9488);
+    }
+    
+    .group:hover .business-gradient-line {
+        transform: scaleX(1);
+    }
+    
+    /* Pulse Animations */
+    @keyframes cta-pulse-blue {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+        50% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
+    }
+    
+    @keyframes cta-pulse-purple {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+        50% { box-shadow: 0 0 0 8px rgba(139, 92, 246, 0); }
+    }
+    
+    @keyframes cta-pulse-green {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+        50% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    }
+    
+    .blue-cta:hover { animation: cta-pulse-blue 2s infinite; }
+    .purple-cta:hover { animation: cta-pulse-purple 2s infinite; }
+    .green-cta:hover { animation: cta-pulse-green 2s infinite; }
+</style>
+
+<!-- Consolidated JavaScript -->
+<script>
+    // Business Solutions Section Interactions
+    document.addEventListener('DOMContentLoaded', function() {
+        // External link click handlers
+        const externalLinks = [
+            { selector: 'a[href="https://smartshule.com"]', color: 'blue' },
+            { selector: 'a[href="https://smartchurch.com"]', color: 'purple' }
+        ];
+        
+        externalLinks.forEach(link => {
+            const element = document.querySelector(link.selector);
+            if (element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const originalHref = this.href;
+                    
+                    // Click animation
+                    this.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                            window.open(originalHref, '_blank');
+                        }, 100);
+                    }, 100);
+                });
+            }
+        });
+        
+        // Internal link handler (HR Solutions demo booking)
+        const demoButton = document.querySelector('a[href="#contact-us"]');
+        if (demoButton) {
+            demoButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Click animation
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                        
+                        // Scroll to contact section
+                        const contactSection = document.getElementById('contact-us');
+                        if (contactSection) {
+                            contactSection.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        } else {
+                            // Fallback to contact page
+                            window.location.href = 'contact-us.html';
+                        }
+                    }, 100);
+                }, 100);
+            });
+        }
+        
+        // Animate stats counters on scroll
+        const stats = document.querySelectorAll('.text-sm.font-bold.text-gray-900');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const text = target.textContent;
+                    
+                    if (text.includes('+')) {
+                        const number = parseInt(text);
+                        if (!isNaN(number)) {
+                            let count = 0;
+                            const increment = number / 20;
+                            const timer = setInterval(() => {
+                                count += increment;
+                                if (count >= number) {
+                                    target.textContent = text;
+                                    clearInterval(timer);
+                                } else {
+                                    target.textContent = Math.floor(count) + '+';
+                                }
+                            }, 50);
+                        }
+                    }
+                    
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        stats.forEach(stat => observer.observe(stat));
+    });
+</script>
+
+    <!-- Simple Demo Section (Closer to Original) -->
+    <section class="bg-gradient-to-br from-gray-50 to-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+
+                <!-- Left Content -->
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="space-y-3">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                            For Free Trials and Demos
+                        </h2>
+                        <p class="text-lg text-gray-600">
+                            Explore full functionality of our products with no commitment required.
+                        </p>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="contact-us.html"
+                            class="btn btn-primary px-8 py-3 text-lg font-semibold rounded-lg hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2">
+                            <span>Request Demo Now</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                             </svg>
-                        </button>
-                        <button class="btn btn-outline px-8 py-3">
-                            View All Products
-                        </button>
+                        </a>
                     </div>
                 </div>
+
+                <!-- Right Image -->
+                <div class="lg:w-1/2">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                            alt="Software Dashboard Demo" class="w-full h-auto object-cover">
+
+                        <!-- Simple Demo Badge -->
+                        <div class="absolute top-4 right-4 bg-white/95 rounded-lg px-3 py-2 shadow-sm">
+                            <span class="text-sm font-medium text-blue-600">Live Demo</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1544,7 +1991,17 @@
                 </a>
             </div>
         </div>
+
+
     </section>
+    <!-- Footer (UNCHANGED) -->
+    <footer class="bottom_footer w-full">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
+            <p>Copyright © Keypad Systems <span id="currentYear">2025</span>. All rights reserved.</p>
+            <p>Powered By: Keypad Systems</p>
+        </div>
+    </footer>
+
 
 
 
@@ -1713,6 +2170,61 @@
     }
 `;
         document.head.appendChild(style);
+    </script>
+    <script>
+        // Tab Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tab switching
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    // Update active button
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('text-white', 'border-blue-400');
+                        btn.classList.add('text-gray-400', 'border-transparent');
+                    });
+                    button.classList.remove('text-gray-400', 'border-transparent');
+                    button.classList.add('text-white', 'border-blue-400');
+
+                    // Show active content
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(`${tabId}-tab`).classList.remove('hidden');
+                });
+            });
+
+            // Counter animation
+            const counter = document.querySelector('.counter');
+            const target = parseInt(counter.getAttribute('data-target'));
+            let count = 0;
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+
+            const updateCounter = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+
+            // Start counter when in viewport
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.unobserve(counter);
+                }
+            }, { threshold: 0.5 });
+
+            observer.observe(counter);
+        });
     </script>
 </body>
 
